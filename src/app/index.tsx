@@ -1,20 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { View } from 'react-native'
+
+import RiveForWebStatic from '../components/RiveForWebStatic'
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Open up App.tsx to start working on your app!</Text>
+    <View
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#3b4252'
+      }}>
+      <RiveForWebStatic />
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  text: {
-    color: 'white'
-  }
-})

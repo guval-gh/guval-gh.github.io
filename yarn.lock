@@ -2354,6 +2354,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rive-app/canvas@npm:2.23.8 ":
+  version: 2.23.8
+  resolution: "@rive-app/canvas@npm:2.23.8"
+  checksum: 10c0/41461decf34a30cce0d870df61f9ec58dafe51aa0185a129c75444edc47015847dc364b6c34655ad0fa12e90206826c094afb1affa569c15cada3b4ca5ef3312
+  languageName: node
+  linkType: hard
+
 "@rtsao/scc@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rtsao/scc@npm:1.1.0"
@@ -5629,6 +5636,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@expo/metro-runtime": "npm:~4.0.0"
+    "@rive-app/canvas": "npm:2.23.8 "
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
     "@types/react": "npm:~18.3.12"
     "@types/react-dom": "npm:^18"
@@ -5649,6 +5657,7 @@ __metadata:
     react-native-safe-area-context: "npm:4.12.0"
     react-native-screens: "npm:~4.1.0"
     react-native-web: "npm:~0.19.13"
+    rive-react-native: "npm:8.1.0"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
@@ -8879,6 +8888,16 @@ __metadata:
   bin:
     rimraf: ./bin.js
   checksum: 10c0/f1e646f8c567795f2916aef7aadf685b543da6b9a53e482bb04b07472c7eef2b476045ba1e29f401c301c66b630b22b815ab31fdd60c5e1ae6566ff523debf45
+  languageName: node
+  linkType: hard
+
+"rive-react-native@npm:8.1.0":
+  version: 8.1.0
+  resolution: "rive-react-native@npm:8.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/626b507d3ff9445bca5d46344e6719a8cc17531a938e4e52df2c99f5816729e5aef6063bcb2f99b5e288f1254df4f655aafd3515f0951fd028b00cbde1fface5
   languageName: node
   linkType: hard
 
