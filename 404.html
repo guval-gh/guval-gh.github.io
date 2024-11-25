@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <meta
+      name="description"
+      content="Page non trouvée - Redirection automatique vers la page d'accueil"
+    />
+    <title>404 - Page non trouvée</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        background-color: #1d1d1d;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #f5f5f5;
+        font-size: 36px;
+      }
+      p {
+        color: #f5f5f5ab;
+        font-size: 18px;
+        margin: 20px 0;
+      }
+      .countdown {
+        font-weight: bold;
+        color: #e74c3c;
+      }
+      .home-link {
+        color: #3498db;
+        text-decoration: none;
+      }
+      .home-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Oups ! Page non trouvée</h1>
+      <p>Désolé, la page que vous recherchez n'existe pas ou a été déplacée.</p>
+      <p>
+        Vous serez redirigé vers la page d'accueil dans
+        <span class="countdown">5</span> secondes.
+      </p>
+      <p>
+        Si la redirection ne fonctionne pas,
+        <a href="index.html" class="home-link">cliquez ici</a>.
+      </p>
+    </div>
+
+    <script>
+      let countdown = 5;
+      const countdownDisplay = document.querySelector(".countdown");
+
+      const timer = setInterval(() => {
+        countdown--;
+        countdownDisplay.textContent = countdown;
+
+        if (countdown <= 0) {
+          clearInterval(timer);
+          window.location.href = "index.html";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
