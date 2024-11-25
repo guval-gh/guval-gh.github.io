@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guillaume DUVAL - Développeur Mobile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
+    <script>
+      const layout = new rive.Layout({
+        fit: rive.Fit.Contain,
+        alignment: rive.Alignment.Center
+      })
+
+      const r = new rive.Rive({
+        src: './guval_portfolio_v6.riv',
+        canvas: document.getElementById('canvas'),
+        autoplay: true,
+        stateMachines: 'State Machine',
+        layout: layout,
+        onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas()
+        }
+      })
+
+      window.addEventListener(
+        'resize',
+        () => {
+          r.resizeDrawingSurfaceToCanvas()
+        },
+        false
+      )
+    </script>
+  </body>
+</html>
