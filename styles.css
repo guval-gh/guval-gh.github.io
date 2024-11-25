@@ -38,3 +38,30 @@ noscript,
     display: block;
   }
 }
+
+#linkedin-button {
+  z-index: 10;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+
+  a {
+    background: #0e76a8;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Helvetica Neue";
+  }
+
+  a:link,
+  a:visited {
+    color: #fff;
+  }
+
+  a:active,
+  a:hover {
+    background: #084461;
+    color: #fff;
+  }
+}
