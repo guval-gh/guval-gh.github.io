@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -7,33 +7,38 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <noscript>
+      <p>🚨 Ce portfolio intéractif nécessite Javascript 🚨</p>
+      <p>Merci de l'activer pour profiter de l'expérience ✨</p>
+    </noscript>
+
     <canvas id="canvas"></canvas>
 
     <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
     <script>
       const layout = new rive.Layout({
         fit: rive.Fit.Contain,
-        alignment: rive.Alignment.Center
-      })
+        alignment: rive.Alignment.Center,
+      });
 
       const r = new rive.Rive({
-        src: './guval_portfolio_v6.riv',
-        canvas: document.getElementById('canvas'),
+        src: "./guval_portfolio_v6.riv",
+        canvas: document.getElementById("canvas"),
         autoplay: true,
-        stateMachines: 'State Machine',
+        stateMachines: "State Machine",
         layout: layout,
         onLoad: () => {
-          r.resizeDrawingSurfaceToCanvas()
-        }
-      })
+          r.resizeDrawingSurfaceToCanvas();
+        },
+      });
 
       window.addEventListener(
-        'resize',
+        "resize",
         () => {
-          r.resizeDrawingSurfaceToCanvas()
+          r.resizeDrawingSurfaceToCanvas();
         },
         false
-      )
+      );
     </script>
   </body>
 </html>
