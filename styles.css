@@ -30,6 +30,10 @@ noscript,
 }
 
 @media (max-width: 1299px) {
+  .top-right-button {
+    display: none;
+  }
+
   #canvas {
     display: none;
   }
@@ -39,12 +43,14 @@ noscript,
   }
 }
 
-#linkedin-button {
+.top-right-button {
   z-index: 10;
   position: absolute;
   top: 3rem;
   right: 2rem;
+}
 
+#linkedin-button {
   a {
     background: #0e76a8;
     border-radius: 0.5rem;
