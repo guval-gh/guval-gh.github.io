@@ -4,15 +4,15 @@ body {
   background-color: #1d1d1d;
 }
 
-#canvas {
+#canvas,
+#canvas-mobile {
   z-index: -1;
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
-noscript,
-#small-screen-message {
+noscript {
   z-index: 10;
   position: absolute;
   top: 50%;
@@ -25,39 +25,53 @@ noscript,
   }
 }
 
-#small-screen-message {
+#canvas {
+  display: block;
+}
+
+#canvas-mobile {
   display: none;
 }
 
-@media (max-width: 1299px) {
-  .top-right-button {
-    display: none;
-  }
+.top-left-content {
+  z-index: -1;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
 
-  #canvas {
-    display: none;
-  }
-
-  #small-screen-message {
-    display: block;
+  h1,
+  h2 {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #f5f5f5;
   }
 }
 
-.top-right-button {
+#linkedin-button,
+#github-button {
   z-index: 10;
   position: absolute;
   top: 3rem;
   right: 2rem;
-}
+  background: #0e76a8;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #fff;
 
-#linkedin-button {
+  img {
+    padding-right: 0.5rem;
+  }
+
   a {
-    background: #0e76a8;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    color: #fff;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     font-family: "Helvetica Neue";
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   a:link,
@@ -69,5 +83,58 @@ noscript,
   a:hover {
     background: #084461;
     color: #fff;
+  }
+}
+
+#github-button {
+  top: 7rem;
+  background: #0d1117;
+
+  a:active,
+  a:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+
+@media (max-width: 1299px) {
+  #canvas {
+    display: none;
+  }
+
+  #canvas-mobile {
+    display: block;
+  }
+
+  #linkedin-button,
+  #github-button {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem;
+
+    img {
+      padding-right: 0;
+    }
+
+    a {
+      p {
+        display: none;
+      }
+    }
+  }
+
+  #github-button {
+    top: 3.5rem;
+  }
+
+  .top-left-content {
+    top: 0.5rem;
+    left: 0.5rem;
+
+    h1,
+    h2 {
+      font-size: 0.8rem;
+      color: #ffffff88;
+    }
   }
 }

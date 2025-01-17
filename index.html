@@ -77,40 +77,46 @@
       <p>Merci de l'activer pour profiter de l'expérience ✨</p>
     </noscript>
 
-    <div id="small-screen-message">
-      <div class="warning-bloc">
-        <p>
-          🚨 Pour profiter de l'expérience intéractive, vous devez consulter ce
-          site sur un grand écran (minimum 1300px) 🚨
-        </p>
-        <p>
-          En attendant, vous pouvez consulter mon profil et/ou venir échanger
-          avec moi sur Linkedin ✨
-        </p>
-      </div>
-
-      <div id="linkedin-button">
-        <a
-          href="https://www.linkedin.com/in/guval/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Lien linkedin.com/in/guval"
-          >linkedin.com/in/guval</a
-        >
-      </div>
+    <div class="top-left-content">
+      <h1>Développeur Mobile React Native</h1>
+      <h2>Guillaume DUVAL</h2>
     </div>
 
-    <div id="linkedin-button" class="top-right-button">
+    <div id="linkedin-button">
       <a
         href="https://www.linkedin.com/in/guval/"
         target="_blank"
         rel="noopener noreferrer"
         title="Lien linkedin.com/in/guval"
-        >linkedin.com/in/guval</a
+      >
+        <img
+          src="/assets/icons/linkedin.svg"
+          width="30"
+          height="30"
+          alt="Linkedin"
+        />
+        <p>linkedin.com/in/guval</p></a
+      >
+    </div>
+
+    <div id="github-button">
+      <a
+        href="https://github.com/guval-gh?tab=overview&from=2025-01-01&to=2025-01-17"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Lien github.com/guval-gh"
+        ><img
+          src="/assets/icons/github.svg"
+          width="30"
+          height="30"
+          alt="Github"
+        />
+        <p>github.com/guval-gh</p></a
       >
     </div>
 
     <canvas id="canvas"></canvas>
+    <canvas id="canvas-mobile"></canvas>
 
     <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
     <script>
@@ -130,10 +136,22 @@
         },
       });
 
+      const r_mobile = new rive.Rive({
+        src: "./assets/animations/guval_portfolio_v6_mobile.riv",
+        canvas: document.getElementById("canvas-mobile"),
+        autoplay: true,
+        stateMachines: "State Machine",
+        layout: layout,
+        onLoad: () => {
+          r_mobile.resizeDrawingSurfaceToCanvas();
+        },
+      });
+
       window.addEventListener(
         "resize",
         () => {
           r.resizeDrawingSurfaceToCanvas();
+          r_mobile.resizeDrawingSurfaceToCanvas();
         },
         false
       );
