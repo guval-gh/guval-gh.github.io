@@ -1,7 +1,7 @@
 {
-  "name": "guval portfolio v6",
+  "name": "guval cv v6",
   "short_name": "guval",
-  "description": "Portfolio intéractif de Guillaume DUVAL, développeur mobile React Native.",
+  "description": "CV interactif de Guillaume DUVAL, développeur mobile React Native.",
   "start_url": "/",
   "icons": [
     {
