@@ -53,9 +53,7 @@ noscript {
   position: absolute;
   top: 3rem;
   right: 2rem;
-  background: #0e76a8;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+
   color: #fff;
 
   img {
@@ -65,8 +63,11 @@ noscript {
   a {
     display: flex;
     align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     text-decoration: none;
     font-family: "Helvetica Neue";
+    background: #0e76a8;
 
     p {
       padding: 0;
@@ -88,7 +89,10 @@ noscript {
 
 #github-button {
   top: 7rem;
-  background: #0d1117;
+
+  a {
+    background: #0d1117;
+  }
 
   a:active,
   a:hover {
@@ -124,7 +128,7 @@ noscript {
   }
 
   #github-button {
-    top: 3.5rem;
+    top: 4rem;
   }
 
   .top-left-content {
